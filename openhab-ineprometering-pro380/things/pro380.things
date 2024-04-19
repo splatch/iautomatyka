@@ -1,0 +1,87 @@
+Bridge modbus:tcp:pro380 "Licznik Modbus PRO-380-Mod" [ host="192.168.2.13", port=502, id=1, timeBetweenTransactionsMillis=500 ] {
+
+    Bridge poller info "Information block" [ start=16384, length=96, refresh=3600000, type="holding", maxTries=3 ] {
+        Thing data serialNumber "serial number" [ readStart=16384, readValueType="int32" ]
+        Thing data code "code" [ readStart=16386, readValueType="int16" ]
+        Thing data modbusId "modbus id" [ readStart=16387, readValueType="int16" ]
+        Thing data baudRate "baud rate" [ readStart=16388, readValueType="int16" ]
+        Thing data protocolVersion "protocol version" [ readStart=16389, readValueType="float32" ]
+        Thing data softwareVersion "software version" [ readStart=16391, readValueType="float32" ]
+        Thing data hardwareVersion "hardware version" [ readStart=16393, readValueType="float32" ]
+    }
+
+    Bridge poller p1 [start=20482, length=28, refresh=500, type="holding", maxTries=1 ] {
+        Thing data voltageL1 [ readStart=20482, readValueType="float32" ]
+        Thing data voltageL2 [ readStart=20484, readValueType="float32" ]
+        Thing data voltageL3 [ readStart=20484, readValueType="float32" ]
+        Thing data frequency [ readStart=20488, readValueType="float32" ]
+    }
+
+    Bridge poller p2 [start=20492, length=74, refresh=500, type="holding" ] {
+        Thing data currentL1 [ readStart=20492, readValueType="float32" ]
+        Thing data currentL2 [ readStart=20494, readValueType="float32" ]
+        Thing data currentL3 [ readStart=20496, readValueType="float32" ]
+        Thing data totalActivePower [ readStart=20498, readValueType="float32" ]
+        Thing data activePowerL1 [ readStart=20500, readValueType="float32" ]
+        Thing data activePowerL2 [ readStart=20502, readValueType="float32" ]
+        Thing data activePowerL3 [ readStart=20504, readValueType="float32" ]
+        Thing data totalReactivePower [ readStart=20506, readValueType="float32" ]
+        Thing data reactivePowerL1 [ readStart=20508, readValueType="float32" ]
+        Thing data reactivePowerL2 [ readStart=20510, readValueType="float32" ]
+        Thing data reactivePowerL3 [ readStart=20512, readValueType="float32" ]
+    }
+
+    Bridge poller p3 [start=20514, length=50, refresh=500, type="holding", maxTries=1 ] {
+        Thing data totalApparentPower [ readStart=20514, readValueType="float32" ]
+        Thing data apparentPowerL1 [ readStart=20516, readValueType="float32" ]
+        Thing data apparentPowerL2 [ readStart=20518, readValueType="float32" ]
+        Thing data apparentPowerL3 [ readStart=20520, readValueType="float32" ]
+        Thing data totalPowerFactor [ readStart=20522, readValueType="float32" ]
+        Thing data powerFactorL1 [ readStart=20524, readValueType="float32" ]
+        Thing data powerFactorL2 [ readStart=20526, readValueType="float32" ]
+        Thing data powerFactorL3 [ readStart=20528, readValueType="float32" ]
+    }
+
+    Bridge poller p5 [start=24576, length=50, refresh=60000, type="holding", maxTries=1 ] {
+        Thing data totalActiveEnergy [ readStart=24576, readValueType="float32" ]
+        Thing data totalActiveEnergyT1 [ readStart=24578, readValueType="float32" ]
+        Thing data totalActiveEnergyT2 [ readStart=24580, readValueType="float32" ]
+        Thing data activeEnergyL1 [ readStart=24582, readValueType="float32" ]
+        Thing data activeEnergyL2 [ readStart=24584, readValueType="float32" ]
+        Thing data activeEnergyL3 [ readStart=24586, readValueType="float32" ]
+        Thing data totalForwardActiveEnergy [ readStart=24588, readValueType="float32" ]
+        Thing data totalForwardActiveEnergyT1 [ readStart=24590, readValueType="float32" ]
+        Thing data totalForwardActiveEnergyT2 [ readStart=24592, readValueType="float32" ]
+        Thing data forwardActiveEnergyL1 [ readStart=24594, readValueType="float32" ]
+        Thing data forwardActiveEnergyL2 [ readStart=24596, readValueType="float32" ]
+        Thing data forwardActiveEnergyL3 [ readStart=24598, readValueType="float32" ]
+    }
+
+    Bridge poller p6 [start=24600, length=49, refresh=10000, type="holding", maxTries=1 ] {
+        Thing data totalReverseActiveEnergy [ readStart=24600, readValueType="float32" ]
+        Thing data totalReverseActiveEnergyT1 [ readStart=24602, readValueType="float32" ]
+        Thing data totalReverseActiveEnergyT2 [ readStart=24604, readValueType="float32" ]
+        Thing data reverseActiveEnergyL1 [ readStart=24606, readValueType="float32" ]
+        Thing data reverseActiveEnergyL2 [ readStart=24608, readValueType="float32" ]
+        Thing data reverseActiveEnergyL3 [ readStart=24610, readValueType="float32" ]
+        Thing data totalReactiveEnergy [ readStart=24612, readValueType="float32" ]
+        Thing data totalReactiveEnergyT1 [ readStart=24614, readValueType="float32" ]
+        Thing data totalReactiveEnergyT1 [ readStart=24616, readValueType="float32" ]
+        Thing data reactiveEnergyL1 [ readStart=24618, readValueType="float32" ]
+        Thing data reactiveEnergyL2 [ readStart=24620, readValueType="float32" ]
+        Thing data reactiveEnergyL3 [ readStart=24622, readValueType="float32" ]
+        Thing data totalForwardReactiveEnergy [ readStart=24624, readValueType="float32" ]
+        Thing data totalForwardReactiveEnergyT1 [ readStart=24626, readValueType="float32" ]
+        Thing data totalForwardReactiveEnergyT2 [ readStart=24628, readValueType="float32" ]
+        Thing data forwardReactiveEnergyL1 [ readStart=24630, readValueType="float32" ]
+        Thing data forwardReactiveEnergyL2 [ readStart=24632, readValueType="float32" ]
+        Thing data forwardReactiveEnergyL3 [ readStart=24634, readValueType="float32" ]
+        Thing data totalReverseReactiveEnergy [ readStart=24636, readValueType="float32" ]
+        Thing data totalReverseReactiveEnergyT1 [ readStart=24638, readValueType="float32" ]
+        Thing data totalReverseReactiveEnergyT2 [ readStart=24640, readValueType="float32" ]
+        Thing data reverseReactiveEnergyL1 [ readStart=24642, readValueType="float32" ]
+        Thing data reverseReactiveEnergyL2 [ readStart=24644, readValueType="float32" ]
+        Thing data reverseReactiveEnergyL3 [ readStart=24646, readValueType="float32" ]
+        Thing data tariff [ readStart=24648, readValueType="int16" ]
+    }
+}

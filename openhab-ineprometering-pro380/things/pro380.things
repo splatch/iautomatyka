@@ -1,6 +1,6 @@
 Bridge modbus:tcp:pro380 "Licznik Modbus PRO-380-Mod" [ host="192.168.2.13", port=502, id=1, timeBetweenTransactionsMillis=500 ] {
 
-    Bridge poller info "Information block" [ start=16384, length=96, refresh=3600000, type="holding", maxTries=3 ] {
+    Bridge poller info "Information block" [ start=16384, length=96, refresh=3600000, type="holding", maxTries=1 ] {
         Thing data serialNumber "serial number" [ readStart=16384, readValueType="int32" ]
         Thing data code "code" [ readStart=16386, readValueType="int16" ]
         Thing data modbusId "modbus id" [ readStart=16387, readValueType="int16" ]
@@ -10,14 +10,11 @@ Bridge modbus:tcp:pro380 "Licznik Modbus PRO-380-Mod" [ host="192.168.2.13", por
         Thing data hardwareVersion "hardware version" [ readStart=16393, readValueType="float32" ]
     }
 
-    Bridge poller p1 [start=20482, length=28, refresh=500, type="holding", maxTries=1 ] {
+    Bridge poller power [start=20482, length=50, refresh=1500, type="holding", maxTries=1 ] {
         Thing data voltageL1 [ readStart=20482, readValueType="float32" ]
         Thing data voltageL2 [ readStart=20484, readValueType="float32" ]
         Thing data voltageL3 [ readStart=20484, readValueType="float32" ]
         Thing data frequency [ readStart=20488, readValueType="float32" ]
-    }
-
-    Bridge poller p2 [start=20492, length=74, refresh=500, type="holding" ] {
         Thing data currentL1 [ readStart=20492, readValueType="float32" ]
         Thing data currentL2 [ readStart=20494, readValueType="float32" ]
         Thing data currentL3 [ readStart=20496, readValueType="float32" ]
@@ -29,9 +26,6 @@ Bridge modbus:tcp:pro380 "Licznik Modbus PRO-380-Mod" [ host="192.168.2.13", por
         Thing data reactivePowerL1 [ readStart=20508, readValueType="float32" ]
         Thing data reactivePowerL2 [ readStart=20510, readValueType="float32" ]
         Thing data reactivePowerL3 [ readStart=20512, readValueType="float32" ]
-    }
-
-    Bridge poller p3 [start=20514, length=50, refresh=500, type="holding", maxTries=1 ] {
         Thing data totalApparentPower [ readStart=20514, readValueType="float32" ]
         Thing data apparentPowerL1 [ readStart=20516, readValueType="float32" ]
         Thing data apparentPowerL2 [ readStart=20518, readValueType="float32" ]
@@ -42,7 +36,7 @@ Bridge modbus:tcp:pro380 "Licznik Modbus PRO-380-Mod" [ host="192.168.2.13", por
         Thing data powerFactorL3 [ readStart=20528, readValueType="float32" ]
     }
 
-    Bridge poller p5 [start=24576, length=50, refresh=60000, type="holding", maxTries=1 ] {
+    Bridge poller energy [start=24576, length=73, refresh=45000, type="holding", maxTries=1 ] {
         Thing data totalActiveEnergy [ readStart=24576, readValueType="float32" ]
         Thing data totalActiveEnergyT1 [ readStart=24578, readValueType="float32" ]
         Thing data totalActiveEnergyT2 [ readStart=24580, readValueType="float32" ]
@@ -55,9 +49,6 @@ Bridge modbus:tcp:pro380 "Licznik Modbus PRO-380-Mod" [ host="192.168.2.13", por
         Thing data forwardActiveEnergyL1 [ readStart=24594, readValueType="float32" ]
         Thing data forwardActiveEnergyL2 [ readStart=24596, readValueType="float32" ]
         Thing data forwardActiveEnergyL3 [ readStart=24598, readValueType="float32" ]
-    }
-
-    Bridge poller p6 [start=24600, length=49, refresh=10000, type="holding", maxTries=1 ] {
         Thing data totalReverseActiveEnergy [ readStart=24600, readValueType="float32" ]
         Thing data totalReverseActiveEnergyT1 [ readStart=24602, readValueType="float32" ]
         Thing data totalReverseActiveEnergyT2 [ readStart=24604, readValueType="float32" ]

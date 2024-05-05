@@ -1,4 +1,4 @@
-# Ineprometering PRO380-Mod
+# inepro Metering PRO380-Mod
 
 Pliki konfiguracyjne dla openHAB, które pozwalają na integrację odczytów licznika [inepro Metering](http://ineprometering.com/) PRO380-Mod.
 

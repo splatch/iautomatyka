@@ -6,76 +6,76 @@ Number PRO380_Protocol_Version "Pro 380 protocolVersion" { channel="modbus:data:
 Number PRO380_Software_Version "Pro 380 softwareVersion" { channel="modbus:data:pro380:info:softwareVersion:number" }
 Number PRO380_Hardware_Version "Pro 380 hardwareVersion" { channel="modbus:data:pro380:info:hardwareVersion:number" }
 
-Number:ElectricPotential PRO380_Voltage_L1 "Pro 380 L1 Voltage" { channel="modbus:data:pro380:p1:voltageL1:number", unit="V", stateDescription=""[pattern="%.0f V"] }
-Number:ElectricPotential PRO380_Voltage_L2 "Pro 380 L2 Voltage" { channel="modbus:data:pro380:p1:voltageL2:number", unit="V", stateDescription=""[pattern="%.0f V"] }
-Number:ElectricPotential PRO380_Voltage_L3 "Pro 380 L3 Voltage" { channel="modbus:data:pro380:p1:voltageL3:number", unit="V", stateDescription=""[pattern="%.0f V"] }
+Number:ElectricPotential PRO380_Voltage_L1 "Pro 380 L1 Voltage" { channel="modbus:data:pro380:power:voltageL1:number", unit="V", stateDescription=""[pattern="%.0f V"] }
+Number:ElectricPotential PRO380_Voltage_L2 "Pro 380 L2 Voltage" { channel="modbus:data:pro380:power:voltageL2:number", unit="V", stateDescription=""[pattern="%.0f V"] }
+Number:ElectricPotential PRO380_Voltage_L3 "Pro 380 L3 Voltage" { channel="modbus:data:pro380:power:voltageL3:number", unit="V", stateDescription=""[pattern="%.0f V"] }
 
-Number:ElectricCurrent PRO380_Current_L1 "Pro 380 L1 Current" { channel="modbus:data:pro380:p2:currentL1:number", unit="A", stateDescription=""[pattern="%.2f A"] }
-Number:ElectricCurrent PRO380_Current_L2 "Pro 380 L2 Current" { channel="modbus:data:pro380:p2:currentL2:number", unit="A", stateDescription=""[pattern="%.2f A"] }
-Number:ElectricCurrent PRO380_Current_L3 "Pro 380 L3 Current" { channel="modbus:data:pro380:p2:currentL3:number", unit="A", stateDescription=""[pattern="%.2f A"] }
+Number:ElectricCurrent PRO380_Current_L1 "Pro 380 L1 Current" { channel="modbus:data:pro380:power:currentL1:number", unit="A", stateDescription=""[pattern="%.2f A"] }
+Number:ElectricCurrent PRO380_Current_L2 "Pro 380 L2 Current" { channel="modbus:data:pro380:power:currentL2:number", unit="A", stateDescription=""[pattern="%.2f A"] }
+Number:ElectricCurrent PRO380_Current_L3 "Pro 380 L3 Current" { channel="modbus:data:pro380:power:currentL3:number", unit="A", stateDescription=""[pattern="%.2f A"] }
 
-Number:Power PRO380_ActivePower_Total "Total active power" { channel="modbus:data:pro380:p2:totalActivePower:number", unit="kW", stateDescription=""[pattern="%.2f W"] }
-Number:Power PRO380_ActivePower_L1 "Active power L1" { channel="modbus:data:pro380:p2:activePowerL1:number", unit="kW", stateDescription=""[pattern="%.2f W"] }
-Number:Power PRO380_ActivePower_L2 "Active power L2" { channel="modbus:data:pro380:p2:activePowerL2:number", unit="kW", stateDescription=""[pattern="%.2f W"] }
-Number:Power PRO380_ActivePower_L3 "Active power L3" { channel="modbus:data:pro380:p2:activePowerL3:number", unit="kW", stateDescription=""[pattern="%.2f W"] }
+Number:Power PRO380_ActivePower_Total "Total active power" { channel="modbus:data:pro380:power:totalActivePower:number", unit="kW", stateDescription=""[pattern="%.2f W"] }
+Number:Power PRO380_ActivePower_L1 "Active power L1" { channel="modbus:data:pro380:power:activePowerL1:number", unit="kW", stateDescription=""[pattern="%.2f W"] }
+Number:Power PRO380_ActivePower_L2 "Active power L2" { channel="modbus:data:pro380:power:activePowerL2:number", unit="kW", stateDescription=""[pattern="%.2f W"] }
+Number:Power PRO380_ActivePower_L3 "Active power L3" { channel="modbus:data:pro380:power:activePowerL3:number", unit="kW", stateDescription=""[pattern="%.2f W"] }
 
-Number:Power PRO380_ReactivePower_Total "Total reactive power" { channel="modbus:data:pro380:p2:totalReactivePower:number", unit="kvar", stateDescription=""[pattern="%.2f var"] }
-Number:Power PRO380_ReactivePower_L1 "Reactive power L1" { channel="modbus:data:pro380:p2:reactivePowerL1:number", unit="kvar", stateDescription=""[pattern="%.2f var"] }
-Number:Power PRO380_ReactivePower_L2 "Reactive power L2" { channel="modbus:data:pro380:p2:reactivePowerL2:number", unit="kvar", stateDescription=""[pattern="%.2f var"] }
-Number:Power PRO380_ReactivePower_L3 "Reactive power L3" { channel="modbus:data:pro380:p2:reactivePowerL3:number", unit="kvar", stateDescription=""[pattern="%.2f var"] }
+Number:Power PRO380_ReactivePower_Total "Total reactive power" { channel="modbus:data:pro380:power:totalReactivePower:number", unit="kvar", stateDescription=""[pattern="%.2f var"] }
+Number:Power PRO380_ReactivePower_L1 "Reactive power L1" { channel="modbus:data:pro380:power:reactivePowerL1:number", unit="kvar", stateDescription=""[pattern="%.2f var"] }
+Number:Power PRO380_ReactivePower_L2 "Reactive power L2" { channel="modbus:data:pro380:power:reactivePowerL2:number", unit="kvar", stateDescription=""[pattern="%.2f var"] }
+Number:Power PRO380_ReactivePower_L3 "Reactive power L3" { channel="modbus:data:pro380:power:reactivePowerL3:number", unit="kvar", stateDescription=""[pattern="%.2f var"] }
 
-Number:Power PRO380_ApparentPower_Total "Total apparent power" { channel="modbus:data:pro380:p3:totalApparentPower:number", unit="kVA", stateDescription=""[pattern="%.2f VA"] }
-Number:Power PRO380_ApparentPower_L1 "Apparent power L1" { channel="modbus:data:pro380:p3:apparentPowerL1:number", unit="kVA", stateDescription=""[pattern="%.2f VA"] }
-Number:Power PRO380_ApparentPower_L2 "Apparent power L2" { channel="modbus:data:pro380:p3:apparentPowerL2:number", unit="kVA", stateDescription=""[pattern="%.2f VA"] }
-Number:Power PRO380_ApparentPower_L3 "Apparent power L3" { channel="modbus:data:pro380:p3:apparentPowerL3:number", unit="kVA", stateDescription=""[pattern="%.2f VA"] }
-
-
-Number PRO380_PowerFactor_Total "Total power factor [%.2f cos ϕ]" { channel="modbus:data:pro380:p3:totalPowerFactor:number" }
-Number PRO380_PowerFactor_L1 "Power factor L1 [%.2f cos ϕ]" { channel="modbus:data:pro380:p3:powerFactorL1:number" }
-Number PRO380_PowerFactor_L2 "Power factor L2 [%.2f cos ϕ]" { channel="modbus:data:pro380:p3:powerFactorL2:number" }
-Number PRO380_PowerFactor_L3 "Power factor L3 [%.2f cos ϕ]" { channel="modbus:data:pro380:p3:powerFactorL3:number" }
+Number:Power PRO380_ApparentPower_Total "Total apparent power" { channel="modbus:data:pro380:power:totalApparentPower:number", unit="kVA", stateDescription=""[pattern="%.2f VA"] }
+Number:Power PRO380_ApparentPower_L1 "Apparent power L1" { channel="modbus:data:pro380:power:apparentPowerL1:number", unit="kVA", stateDescription=""[pattern="%.2f VA"] }
+Number:Power PRO380_ApparentPower_L2 "Apparent power L2" { channel="modbus:data:pro380:power:apparentPowerL2:number", unit="kVA", stateDescription=""[pattern="%.2f VA"] }
+Number:Power PRO380_ApparentPower_L3 "Apparent power L3" { channel="modbus:data:pro380:power:apparentPowerL3:number", unit="kVA", stateDescription=""[pattern="%.2f VA"] }
 
 
-Number:Energy PRO380_ActiveEnergy_Total "Total active energy" { channel="modbus:data:pro380:p5:totalActiveEnergy:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ActiveEnergy_Total_T1 "Total active energy T1" { channel="modbus:data:pro380:p5:totalActiveEnergyT1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ActiveEnergy_Total_T2 "Total active energy T2" { channel="modbus:data:pro380:p5:totalActiveEnergyT2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ActiveEnergy_L1 "Total active energy L1" { channel="modbus:data:pro380:p5:activeEnergyL1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ActiveEnergy_L2 "Total active energy L2" { channel="modbus:data:pro380:p5:activeEnergyL2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ActiveEnergy_L3 "Total active energy L3" { channel="modbus:data:pro380:p5:activeEnergyL3:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number PRO380_PowerFactor_Total "Total power factor [%.2f cos ϕ]" { channel="modbus:data:pro380:power:totalPowerFactor:number" }
+Number PRO380_PowerFactor_L1 "Power factor L1 [%.2f cos ϕ]" { channel="modbus:data:pro380:power:powerFactorL1:number" }
+Number PRO380_PowerFactor_L2 "Power factor L2 [%.2f cos ϕ]" { channel="modbus:data:pro380:power:powerFactorL2:number" }
+Number PRO380_PowerFactor_L3 "Power factor L3 [%.2f cos ϕ]" { channel="modbus:data:pro380:power:powerFactorL3:number" }
 
-Number:Energy PRO380_ForwardActiveEnergy_Total "Forward active energy total" { channel="modbus:data:pro380:p5:totalForwardActiveEnergy:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ForwardActiveEnergy_Total_T1 "Forward active energy T1" { channel="modbus:data:pro380:p5:totalForwardActiveEnergyT1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ForwardActiveEnergy_Total_T2 "Forward active energy T2" { channel="modbus:data:pro380:p5:totalForwardActiveEnergyT2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ForwardActiveEnergy_L1 "Forward active energy L1" { channel="modbus:data:pro380:p5:forwardActiveEnergyL1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ForwardActiveEnergy_L2 "Forward active energy L2" { channel="modbus:data:pro380:p5:forwardActiveEnergyL2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ForwardActiveEnergy_L3 "Forward active energy L3" { channel="modbus:data:pro380:p5:forwardActiveEnergyL3:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
 
-Number:Energy PRO380_ReverseActiveEnergy_Total "Reverse active energy total" { channel="modbus:data:pro380:p6:totalReverseActiveEnergy:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ReverseActiveEnergy_Total_T1 "Reverse active energy T1" { channel="modbus:data:pro380:p6:totalReverseActiveEnergyT1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ReverseActiveEnergy_Total_T2 "Reverse active energy T2" { channel="modbus:data:pro380:p6:totalReverseActiveEnergyT2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ReverseActiveEnergy_L1 "Reverse active energy L1" { channel="modbus:data:pro380:p6:reverseActiveEnergyL1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ReverseActiveEnergy_L2 "Reverse active energy L2" { channel="modbus:data:pro380:p6:reverseActiveEnergyL2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
-Number:Energy PRO380_ReverseActiveEnergy_L3 "Reverse active energy L3" { channel="modbus:data:pro380:p6:reverseActiveEnergyL3:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ActiveEnergy_Total "Total active energy" { channel="modbus:data:pro380:energy:totalActiveEnergy:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ActiveEnergy_Total_T1 "Total active energy T1" { channel="modbus:data:pro380:energy:totalActiveEnergyT1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ActiveEnergy_Total_T2 "Total active energy T2" { channel="modbus:data:pro380:energy:totalActiveEnergyT2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ActiveEnergy_L1 "Total active energy L1" { channel="modbus:data:pro380:energy:activeEnergyL1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ActiveEnergy_L2 "Total active energy L2" { channel="modbus:data:pro380:energy:activeEnergyL2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ActiveEnergy_L3 "Total active energy L3" { channel="modbus:data:pro380:energy:activeEnergyL3:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
 
-Number:Energy PRO380_ReactiveEnergy_Total "Reactive energy total" { channel="modbus:data:pro380:p6:totalReactiveEnergy:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReactiveEnergy_Total_T1 "Reactive energy T1" { channel="modbus:data:pro380:p6:totalReactiveEnergyT1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReactiveEnergy_Total_T2 "Reactive energy T2" { channel="modbus:data:pro380:p6:totalReactiveEnergyT2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReactiveEnergy_L1 "Reactive energy L1" { channel="modbus:data:pro380:p6:reactiveEnergyL1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReactiveEnergy_L2 "Reactive energy L2" { channel="modbus:data:pro380:p6:reactiveEnergyL2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReactiveEnergy_L3 "Reactive energy L3" { channel="modbus:data:pro380:p6:reactiveEnergyL3:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ForwardActiveEnergy_Total "Forward active energy total" { channel="modbus:data:pro380:energy:totalForwardActiveEnergy:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ForwardActiveEnergy_Total_T1 "Forward active energy T1" { channel="modbus:data:pro380:energy:totalForwardActiveEnergyT1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ForwardActiveEnergy_Total_T2 "Forward active energy T2" { channel="modbus:data:pro380:energy:totalForwardActiveEnergyT2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ForwardActiveEnergy_L1 "Forward active energy L1" { channel="modbus:data:pro380:energy:forwardActiveEnergyL1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ForwardActiveEnergy_L2 "Forward active energy L2" { channel="modbus:data:pro380:energy:forwardActiveEnergyL2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ForwardActiveEnergy_L3 "Forward active energy L3" { channel="modbus:data:pro380:energy:forwardActiveEnergyL3:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
 
-Number:Energy PRO380_ForwardReactiveEnergy_Total "Forward reactive energy total" { channel="modbus:data:pro380:p6:totalForwardReactiveEnergy:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ForwardReactiveEnergy_Total_T1 "Forward reactive energy T1" { channel="modbus:data:pro380:p6:totalForwardReactiveEnergyT1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ForwardReactiveEnergy_Total_T2 "Forward reactive energy T2" { channel="modbus:data:pro380:p6:totalForwardReactiveEnergyT2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ForwardReactiveEnergy_L1 "Forward reactive energy L1" { channel="modbus:data:pro380:p6:forwardReactiveEnergyL1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ForwardReactiveEnergy_L2 "Forward reactive energy L2" { channel="modbus:data:pro380:p6:forwardReactiveEnergyL2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ForwardReactiveEnergy_L3 "Forward reactive energy L3" { channel="modbus:data:pro380:p6:forwardReactiveEnergyL3:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReverseActiveEnergy_Total "Reverse active energy total" { channel="modbus:data:pro380:energy:totalReverseActiveEnergy:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ReverseActiveEnergy_Total_T1 "Reverse active energy T1" { channel="modbus:data:pro380:energy:totalReverseActiveEnergyT1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ReverseActiveEnergy_Total_T2 "Reverse active energy T2" { channel="modbus:data:pro380:energy:totalReverseActiveEnergyT2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ReverseActiveEnergy_L1 "Reverse active energy L1" { channel="modbus:data:pro380:energy:reverseActiveEnergyL1:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ReverseActiveEnergy_L2 "Reverse active energy L2" { channel="modbus:data:pro380:energy:reverseActiveEnergyL2:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
+Number:Energy PRO380_ReverseActiveEnergy_L3 "Reverse active energy L3" { channel="modbus:data:pro380:energy:reverseActiveEnergyL3:number", unit="kWh", stateDescription=""[pattern="%.2f MWh"] }
 
-Number:Energy PRO380_ReverseReactiveEnergy_Total "Reverse reactive energy total" { channel="modbus:data:pro380:p6:totalReverseReactiveEnergy:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReverseReactiveEnergy_Total_T1 "Reverse reactive energy T1" { channel="modbus:data:pro380:p6:totalReverseReactiveEnergyT1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReverseReactiveEnergy_Total_T2 "Reverse reactive energy T2" { channel="modbus:data:pro380:p6:totalReverseReactiveEnergyT2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReverseReactiveEnergy_L1 "Reverse reactive energy L1" { channel="modbus:data:pro380:p6:reverseReactiveEnergyL1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReverseReactiveEnergy_L2 "Reverse reactive energy L2" { channel="modbus:data:pro380:p6:reverseReactiveEnergyL2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
-Number:Energy PRO380_ReverseReactiveEnergy_L3 "Reverse reactive energy L3" { channel="modbus:data:pro380:p6:reverseReactiveEnergyL3:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReactiveEnergy_Total "Reactive energy total" { channel="modbus:data:pro380:energy:totalReactiveEnergy:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReactiveEnergy_Total_T1 "Reactive energy T1" { channel="modbus:data:pro380:energy:totalReactiveEnergyT1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReactiveEnergy_Total_T2 "Reactive energy T2" { channel="modbus:data:pro380:energy:totalReactiveEnergyT2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReactiveEnergy_L1 "Reactive energy L1" { channel="modbus:data:pro380:energy:reactiveEnergyL1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReactiveEnergy_L2 "Reactive energy L2" { channel="modbus:data:pro380:energy:reactiveEnergyL2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReactiveEnergy_L3 "Reactive energy L3" { channel="modbus:data:pro380:energy:reactiveEnergyL3:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
 
-Number PRO380_Tariff "Tariff [%.2f]" { channel="modbus:data:pro380:p6:tariff:number" }
+Number:Energy PRO380_ForwardReactiveEnergy_Total "Forward reactive energy total" { channel="modbus:data:pro380:energy:totalForwardReactiveEnergy:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ForwardReactiveEnergy_Total_T1 "Forward reactive energy T1" { channel="modbus:data:pro380:energy:totalForwardReactiveEnergyT1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ForwardReactiveEnergy_Total_T2 "Forward reactive energy T2" { channel="modbus:data:pro380:energy:totalForwardReactiveEnergyT2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ForwardReactiveEnergy_L1 "Forward reactive energy L1" { channel="modbus:data:pro380:energy:forwardReactiveEnergyL1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ForwardReactiveEnergy_L2 "Forward reactive energy L2" { channel="modbus:data:pro380:energy:forwardReactiveEnergyL2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ForwardReactiveEnergy_L3 "Forward reactive energy L3" { channel="modbus:data:pro380:energy:forwardReactiveEnergyL3:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+
+Number:Energy PRO380_ReverseReactiveEnergy_Total "Reverse reactive energy total" { channel="modbus:data:pro380:energy:totalReverseReactiveEnergy:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReverseReactiveEnergy_Total_T1 "Reverse reactive energy T1" { channel="modbus:data:pro380:energy:totalReverseReactiveEnergyT1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReverseReactiveEnergy_Total_T2 "Reverse reactive energy T2" { channel="modbus:data:pro380:energy:totalReverseReactiveEnergyT2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReverseReactiveEnergy_L1 "Reverse reactive energy L1" { channel="modbus:data:pro380:energy:reverseReactiveEnergyL1:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReverseReactiveEnergy_L2 "Reverse reactive energy L2" { channel="modbus:data:pro380:energy:reverseReactiveEnergyL2:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+Number:Energy PRO380_ReverseReactiveEnergy_L3 "Reverse reactive energy L3" { channel="modbus:data:pro380:energy:reverseReactiveEnergyL3:number", unit="kvarh", stateDescription=""[pattern="%.2f varh"] }
+
+Number PRO380_Tariff "Tariff [%.2f]" { channel="modbus:data:pro380:energy:tariff:number" }
